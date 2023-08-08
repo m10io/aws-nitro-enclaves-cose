@@ -58,7 +58,6 @@ pub struct SigStructure(
     /// body_protected : empty_or_serialized_map,
     ByteBuf,
     /// ? sign_protected : empty_or_serialized_map,
-    #[serde(default)]
     #[serde(skip_serializing_if = "Option::is_none")]
     Option<ByteBuf>,
     /// external_aad : bstr,
